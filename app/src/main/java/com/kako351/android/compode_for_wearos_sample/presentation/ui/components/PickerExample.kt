@@ -28,7 +28,9 @@ fun PickerExample() {
             Text(text = items[it])
         }
 
-        Text(text = "selected item = ${items[state.selectedOption]}")
+        if(!state.isScrollInProgress) {
+            Text(text = "selected item = ${items[state.selectedOption]}")
+        }
     }
 }
 
