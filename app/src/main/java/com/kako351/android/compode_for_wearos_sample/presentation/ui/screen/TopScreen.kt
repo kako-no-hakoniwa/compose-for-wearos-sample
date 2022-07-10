@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.AppCardExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.PickerExample
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
@@ -42,6 +43,7 @@ fun TopScreen (){
             state = listState
         ) {
             item { AppCardExample() }
+            item { PickerExample() }
         }
     }
 }
