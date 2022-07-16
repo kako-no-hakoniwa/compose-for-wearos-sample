@@ -10,7 +10,9 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.AppCardExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.ButtonExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.PickerExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.ToggleButtonExample
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
@@ -19,7 +21,7 @@ fun TopScreen (){
     Scaffold(
         timeText = {
             if (!listState.isScrollInProgress) {
-                TimeText()
+//                TimeText()
             }
         },
         vignette = {
@@ -39,11 +41,15 @@ fun TopScreen (){
             .wrapContentSize(align = Alignment.Center)
         ScalingLazyColumn(
             modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
             autoCentering = AutoCenteringParams(itemIndex = 0),
             state = listState
         ) {
-            item { AppCardExample() }
-            item { PickerExample() }
+//            item { AppCardExample() }
+//            item { PickerExample() }
+//            item { ButtonExample() }
+            item { ToggleButtonExample() }
         }
     }
 }
