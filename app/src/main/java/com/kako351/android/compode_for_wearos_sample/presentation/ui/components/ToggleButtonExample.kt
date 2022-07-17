@@ -28,7 +28,10 @@ fun ToggleButtonExample() {
         }
     ) {
         Icon(
-            imageVector = if(checked.value) Icons.Rounded.VolumeUp else Icons.Rounded.VolumeOff,
+            imageVector = when(checked.value) {
+                true -> Icons.Rounded.VolumeUp
+                false -> Icons.Rounded.VolumeOff
+            },
             contentDescription = "volumeUp",
             modifier = Modifier
                 .size(ToggleButtonDefaults.DefaultIconSize)
