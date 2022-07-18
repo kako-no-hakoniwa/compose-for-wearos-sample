@@ -10,6 +10,10 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.*
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.AvatarChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ImageChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ToggleChipExample
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
@@ -46,8 +50,12 @@ fun TopScreen (){
 //            item { AppCardExample() }
 //            item { PickerExample() }
 //            item { ButtonExample() }
-            item { CompactButtonExample() }
+//            item { CompactButtonExample() }
 //            item { ToggleButtonExample() }
+//            item { ChipExample() }
+//            item { ImageChipExample() }
+//            item { AvatarChipExample() }
+            item { ToggleChipExample() }
         }
     }
 }

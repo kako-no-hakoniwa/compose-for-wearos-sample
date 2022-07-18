@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/MainActivity.kt" value="0.4713541666666667" />
+        <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/ui/components/chip/AvatarChipExample.kt" value="0.5142045454545454" />
+        <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/ui/components/chip/ChipExample.kt" value="0.7546296296296297" />
       </map>
     </option>
   </component>
