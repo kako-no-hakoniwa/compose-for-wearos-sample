@@ -9,10 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.AppCardExample
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.ButtonExample
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.PickerExample
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.ToggleButtonExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.*
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
@@ -49,7 +46,8 @@ fun TopScreen (){
 //            item { AppCardExample() }
 //            item { PickerExample() }
 //            item { ButtonExample() }
-            item { ToggleButtonExample() }
+            item { CompactButtonExample() }
+//            item { ToggleButtonExample() }
         }
     }
 }
