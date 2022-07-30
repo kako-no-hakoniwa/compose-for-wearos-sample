@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/MainActivity.kt" value="0.4713541666666667" />
+        <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/ui/components/card/AppCardExample.kt" value="0.1925925925925926" />
         <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/ui/components/chip/AvatarChipExample.kt" value="0.5142045454545454" />
         <entry key="app/src/main/java/com/kako351/android/compode_for_wearos_sample/presentation/ui/components/chip/ChipExample.kt" value="0.7546296296296297" />
+        <entry key="app/src/main/res/drawable/animation_check.xml" value="0.104" />
+        <entry key="app/src/main/res/drawable/animation_drawable.xml" value="0.104" />
+        <entry key="app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.104" />
+        <entry key="app/src/main/res/drawable/ic_baseline_sync_24.xml" value="0.104" />
+        <entry key="app/src/main/res/drawable/vectordrawable.xml" value="0.104" />
       </map>
     </option>
   </component>
