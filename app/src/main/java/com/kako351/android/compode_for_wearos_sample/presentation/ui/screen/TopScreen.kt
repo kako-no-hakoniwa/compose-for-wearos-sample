@@ -10,10 +10,14 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.*
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.card.AppCardExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.card.TitleCardExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.AvatarChipExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ChipExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ImageChipExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ToggleChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.AlertExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.ConfirmationExample
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
@@ -55,8 +59,12 @@ fun TopScreen (){
 //            item { ChipExample() }
 //            item { ImageChipExample() }
 //            item { AvatarChipExample() }
-            item { ToggleChipExample() }
+//            item { ToggleChipExample() }
+//            item { TitleCardExample() }
+            item { AppCardExample() }
         }
+//        AlertExample()
+        ConfirmationExample()
     }
 }
 
