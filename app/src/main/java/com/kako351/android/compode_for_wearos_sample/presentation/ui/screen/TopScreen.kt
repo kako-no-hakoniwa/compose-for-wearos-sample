@@ -18,6 +18,13 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ToggleChipExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.AlertExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.ConfirmationExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.DatePickerExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.SegmentedProgressIndicatorExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.TimePickerExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.TimePickerWith12HourClockExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.InlineSliderExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.PickerExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.StepperExample
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
@@ -61,10 +68,24 @@ fun TopScreen (){
 //            item { AvatarChipExample() }
 //            item { ToggleChipExample() }
 //            item { TitleCardExample() }
-            item { AppCardExample() }
+//            item { AppCardExample() }
+//            item {
+//                Column(
+//                    modifier = Modifier.fillMaxSize(),
+//                    verticalArrangement = Arrangement.Center,
+//                    horizontalAlignment = Alignment.CenterHorizontally
+//                ) {
+////                    PickerExample()
+//                    InlineSliderExample()
+//                }
+//            }
         }
 //        AlertExample()
-        ConfirmationExample()
+//        ConfirmationExample()
+//        StepperExample()
+//        TimePickerExample()
+//        TimePickerWith12HourClockExample()
+        SegmentedProgressIndicatorExample()
     }
 }
 
