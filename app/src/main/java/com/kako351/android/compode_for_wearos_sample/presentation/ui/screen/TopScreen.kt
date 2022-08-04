@@ -22,6 +22,7 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.SegmentedProgressIndicatorExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.TimePickerExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.TimePickerWith12HourClockExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.list.ScalingLazyColumnExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.InlineSliderExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.PickerExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.StepperExample
@@ -51,13 +52,14 @@ fun TopScreen (){
         val iconModifier = Modifier
             .size(24.dp)
             .wrapContentSize(align = Alignment.Center)
-        ScalingLazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-            autoCentering = AutoCenteringParams(itemIndex = 0),
-            state = listState
-        ) {
+        ScalingLazyColumnExample()
+//        ScalingLazyColumn(
+//            modifier = Modifier.fillMaxSize(),
+//            verticalArrangement = Arrangement.Center,
+//            horizontalAlignment = Alignment.CenterHorizontally,
+//            autoCentering = AutoCenteringParams(itemIndex = 0),
+//            state = listState
+//        ) {
 //            item { AppCardExample() }
 //            item { PickerExample() }
 //            item { ButtonExample() }
@@ -69,23 +71,23 @@ fun TopScreen (){
 //            item { ToggleChipExample() }
 //            item { TitleCardExample() }
 //            item { AppCardExample() }
-//            item {
-//                Column(
-//                    modifier = Modifier.fillMaxSize(),
-//                    verticalArrangement = Arrangement.Center,
-//                    horizontalAlignment = Alignment.CenterHorizontally
-//                ) {
-////                    PickerExample()
-//                    InlineSliderExample()
-//                }
-//            }
-        }
+////            item {
+////                Column(
+////                    modifier = Modifier.fillMaxSize(),
+////                    verticalArrangement = Arrangement.Center,
+////                    horizontalAlignment = Alignment.CenterHorizontally
+////                ) {
+//////                    PickerExample()
+////                    InlineSliderExample()
+////                }
+////            }
+//        }
 //        AlertExample()
 //        ConfirmationExample()
 //        StepperExample()
 //        TimePickerExample()
 //        TimePickerWith12HourClockExample()
-        SegmentedProgressIndicatorExample()
+//        SegmentedProgressIndicatorExample()
     }
 }
 
