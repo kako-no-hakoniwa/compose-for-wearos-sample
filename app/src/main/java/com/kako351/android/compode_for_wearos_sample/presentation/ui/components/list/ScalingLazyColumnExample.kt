@@ -12,8 +12,9 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 
 @Composable
-fun ScalingLazyColumnExample() {
-    val listState = rememberScalingLazyListState()
+fun ScalingLazyColumnExample(
+    listState: ScalingLazyListState = rememberScalingLazyListState()
+) {
     Box {
         ScalingLazyColumn(
             modifier = Modifier.fillMaxSize(),
