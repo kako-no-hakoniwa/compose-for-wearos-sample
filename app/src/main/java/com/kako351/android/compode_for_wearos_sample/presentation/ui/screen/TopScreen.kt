@@ -1,11 +1,13 @@
 package com.kako351.android.compode_for_wearos_sample.presentation.ui.screen
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -15,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
+import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItems
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.*
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ButtonScreen
@@ -41,7 +44,7 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 @Composable
 fun TopScreen (
     listState: ScalingLazyListState = rememberScalingLazyListState(),
-    items: List<ExmapleIndexListItem>
+    items: ExmapleIndexListItems
 ){
     Scaffold(
         timeText = {
