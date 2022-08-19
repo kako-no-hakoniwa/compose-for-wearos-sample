@@ -62,49 +62,6 @@ fun TopScreen (
         }
     ) {
         ScalingLazyColumnExample(listState = listState, items = items)
-//        ButtonScreen(listState = listState)
-//        val contentModifier = Modifier
-//            .fillMaxWidth()
-//            .padding(bottom = 8.dp)
-//        val iconModifier = Modifier
-//            .size(24.dp)
-//            .wrapContentSize(align = Alignment.Center)
-//        ScalingLazyColumnExample()
-//        ScalingLazyColumn(
-//            modifier = Modifier.fillMaxSize(),
-//            verticalArrangement = Arrangement.Center,
-//            horizontalAlignment = Alignment.CenterHorizontally,
-//            autoCentering = AutoCenteringParams(itemIndex = 0),
-//            state = listState
-//        ) {
-//            item { AppCardExample() }
-//            item { PickerExample() }
-//            item { ButtonExample() }
-//            item { CompactButtonExample() }
-//            item { ToggleButtonExample() }
-//            item { ChipExample() }
-//            item { ImageChipExample() }
-//            item { AvatarChipExample() }
-//            item { ToggleChipExample() }
-//            item { TitleCardExample() }
-//            item { AppCardExample() }
-//            item {
-//                Column(
-//                    modifier = Modifier.fillMaxSize(),
-//                    verticalArrangement = Arrangement.Center,
-//                    horizontalAlignment = Alignment.CenterHorizontally
-//                ) {
-////                    PickerExample()
-//                    InlineSliderExample()
-//                }
-//            }
-//        }
-//        AlertExample()
-//        ConfirmationExample()
-//        StepperExample()
-//        TimePickerExample()
-//        TimePickerWith12HourClockExample()
-//        SegmentedProgressIndicatorExample()
     }
 }
 
