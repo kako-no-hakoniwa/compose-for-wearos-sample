@@ -11,6 +11,8 @@ import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIn
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ButtonScreen
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.CardScreen
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ChipScreen
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.PickerScreen
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.StepperExample
 
 @Composable
 fun Root(
@@ -37,6 +39,12 @@ fun Root(
         }
         composable("card") {
             CardScreen()
+        }
+        composable("picker") {
+            PickerScreen(onClickStepper = { navController.navigate("stepper") })
+        }
+        composable("stepper") {
+            StepperExample()
         }
     }
 }
