@@ -10,37 +10,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
+import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
 
 @Composable
 fun ScalingLazyColumnExample(
-    listState: ScalingLazyListState = rememberScalingLazyListState()
+    listState: ScalingLazyListState = rememberScalingLazyListState(),
+    items: List<ExmapleIndexListItem>
 ) {
-    Box {
-        ScalingLazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            state = listState,
-            autoCentering = AutoCenteringParams(itemIndex = 0)
-        ) {
-            items((0..10).toList()) {
-                Chip(
-                    modifier = Modifier.fillMaxSize(),
-                    label = { Text(text = "${it}th Item") },
-                    icon = {
-                        Icon(
-                            imageVector = Icons.Rounded.Numbers,
-                            contentDescription = "Numbers",
-                            modifier = Modifier
-                                .size(ChipDefaults.IconSize)
-                                .wrapContentSize(align = Alignment.Center)
-                        )
-                    },
-                    onClick = { /*TODO*/ }
-                )
-            }
+    ScalingLazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        state = listState,
+        autoCentering = AutoCenteringParams(itemIndex = 0)
+    ) {
+        items(items) {
+            Chip(
+                modifier = Modifier.fillMaxSize(),
+                label = { Text(text = it.title) },
+                onClick = { it.onClick() }
+            )
         }
-
-        PositionIndicator(
-            scalingLazyListState = listState
-        )
     }
 }

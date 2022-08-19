@@ -24,6 +24,7 @@ import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.Text
 import com.kako351.android.compode_for_wearos_sample.R
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.screen.Root
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.screen.TopScreen
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CompodeforwearossampleTheme {
-                TopScreen()
+                Root()
             }
         }
     }

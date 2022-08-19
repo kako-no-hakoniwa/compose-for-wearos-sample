@@ -14,8 +14,10 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.*
+import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.CompodeforwearossampleTheme
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.*
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ButtonScreen
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.card.AppCardExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.card.TitleCardExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.AvatarChipExample
@@ -37,41 +39,44 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable
-fun TopScreen (){
-//    NavigationExample()
-    val listState = rememberScalingLazyListState()
+fun TopScreen (
+    listState: ScalingLazyListState = rememberScalingLazyListState(),
+    items: List<ExmapleIndexListItem>
+){
     Scaffold(
         timeText = {
             if (!listState.isScrollInProgress) {
-//                TimeText()
+                TimeText()
             }
         },
-//        vignette = {
-//            Vignette(vignettePosition = VignettePosition.TopAndBottom)
-//        },
+        vignette = {
+            Vignette(vignettePosition = VignettePosition.TopAndBottom)
+        },
         positionIndicator = {
             PositionIndicator(
                 scalingLazyListState = listState
             )
         }
     ) {
-        val contentModifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 8.dp)
-        val iconModifier = Modifier
-            .size(24.dp)
-            .wrapContentSize(align = Alignment.Center)
+        ScalingLazyColumnExample(listState = listState, items = items)
+//        ButtonScreen(listState = listState)
+//        val contentModifier = Modifier
+//            .fillMaxWidth()
+//            .padding(bottom = 8.dp)
+//        val iconModifier = Modifier
+//            .size(24.dp)
+//            .wrapContentSize(align = Alignment.Center)
 //        ScalingLazyColumnExample()
-        ScalingLazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-            autoCentering = AutoCenteringParams(itemIndex = 0),
-            state = listState
-        ) {
+//        ScalingLazyColumn(
+//            modifier = Modifier.fillMaxSize(),
+//            verticalArrangement = Arrangement.Center,
+//            horizontalAlignment = Alignment.CenterHorizontally,
+//            autoCentering = AutoCenteringParams(itemIndex = 0),
+//            state = listState
+//        ) {
 //            item { AppCardExample() }
 //            item { PickerExample() }
-            item { ButtonExample() }
+//            item { ButtonExample() }
 //            item { CompactButtonExample() }
 //            item { ToggleButtonExample() }
 //            item { ChipExample() }
@@ -90,7 +95,7 @@ fun TopScreen (){
 //                    InlineSliderExample()
 //                }
 //            }
-        }
+//        }
 //        AlertExample()
 //        ConfirmationExample()
 //        StepperExample()
@@ -100,10 +105,3 @@ fun TopScreen (){
     }
 }
 
-@Preview(device = Devices.WEAR_OS_SMALL_ROUND, showSystemUi = true)
-@Composable
-fun PreviewTopScreen() {
-    CompodeforwearossampleTheme {
-        TopScreen()
-    }
-}

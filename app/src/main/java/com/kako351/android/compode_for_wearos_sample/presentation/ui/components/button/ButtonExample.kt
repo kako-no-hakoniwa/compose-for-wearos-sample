@@ -31,7 +31,7 @@ fun ButtonExample() {
     }
 }
 
-@Preview(device = Devices.WEAR_OS_LARGE_ROUND)
+@Preview
 @Composable
 fun PreviewButtonExample() {
     CompodeforwearossampleTheme {
