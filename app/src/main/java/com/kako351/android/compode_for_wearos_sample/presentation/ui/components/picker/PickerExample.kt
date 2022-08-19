@@ -15,11 +15,12 @@ import androidx.wear.compose.material.rememberPickerState
 fun PickerExample() {
     val items = listOf("One", "Two", "Three", "Four", "Five")
     val state = rememberPickerState(items.size)
-    val contentDescription = remember { derivedStateOf { "${state.selectedOption + 1}" } }
+    val contentDescription = remember {
+        derivedStateOf { "${state.selectedOption + 1}" }
+    }
     Picker(
         modifier = Modifier.size(100.dp, 100.dp),
-        state = state,
-        contentDescription = contentDescription.value
+        state = state
     ) {
         Text(items[it])
     }

@@ -1,19 +1,17 @@
 package com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.wear.compose.material.*
 
 @Composable
 fun ToggleChipExample() {
-    val checked = remember { mutableStateOf(true) }
+    var checked by remember { mutableStateOf(true) }
     ToggleChip(
-        checked = checked.value,
+        checked = checked,
         onCheckedChange = {
-            checked.value = it
+            checked = it
         },
         label = {
             Text(
@@ -25,8 +23,8 @@ fun ToggleChipExample() {
         toggleControl = {
             Icon(
                 imageVector = ToggleChipDefaults
-                    .switchIcon(checked = checked.value),
-                contentDescription = if(checked.value) "On" else "Off"
+                    .switchIcon(checked = checked),
+                contentDescription = if(checked) "On" else "Off"
             )
         },
         colors = ToggleChipDefaults.toggleChipColors(

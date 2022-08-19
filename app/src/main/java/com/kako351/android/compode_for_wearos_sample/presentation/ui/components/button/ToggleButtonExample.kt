@@ -6,10 +6,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.VolumeMute
 import androidx.compose.material.icons.rounded.VolumeOff
 import androidx.compose.material.icons.rounded.VolumeUp
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.ComposeCompilerApi
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,15 +17,15 @@ import com.kako351.android.compode_for_wearos_sample.presentation.theme.Compodef
 
 @Composable
 fun ToggleButtonExample() {
-    val checked = remember { mutableStateOf(true) }
+    var checked by remember { mutableStateOf(true) }
     ToggleButton(
-        checked = checked.value,
+        checked = checked,
         onCheckedChange = {
-            checked.value = it
+            checked = it
         }
     ) {
         Icon(
-            imageVector = when(checked.value) {
+            imageVector = when(checked) {
                 true -> Icons.Rounded.VolumeUp
                 false -> Icons.Rounded.VolumeOff
             },

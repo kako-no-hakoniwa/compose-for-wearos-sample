@@ -9,10 +9,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Message
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -29,11 +26,11 @@ import com.kako351.android.compode_for_wearos_sample.presentation.theme.wearColo
 
 @Composable
 fun ConfirmationExample() {
-    val show = remember { mutableStateOf(true) }
-    if(show.value){
+    var show by remember { mutableStateOf(true) }
+    if(show){
         Confirmation(
             onTimeout = {
-                show.value = false
+                show = false
             },
             icon = {
                 Image(

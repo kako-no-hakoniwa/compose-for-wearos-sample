@@ -7,9 +7,7 @@ import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Headphones
 import androidx.compose.material.icons.rounded.VolumeOff
 import androidx.compose.material.icons.rounded.VolumeUp
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
@@ -18,10 +16,10 @@ import androidx.wear.compose.material.*
 
 @Composable
 fun StepperExample() {
-    val volume = remember { mutableStateOf(3) }
+    var volume by remember { mutableStateOf(3) }
     Stepper(
-        value = volume.value,
-        onValueChange = { volume.value = it },
+        value = volume,
+        onValueChange = { volume = it },
         valueProgression = 0..9,
         increaseIcon = { Icon(InlineSliderDefaults.Increase, "Increase") },
         decreaseIcon = { Icon(InlineSliderDefaults.Decrease, "Decrease") }
