@@ -8,10 +8,9 @@ import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItems
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ButtonScreen
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.CardScreen
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ChipScreen
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.PickerScreen
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.*
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.AlertExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.ConfirmationExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.StepperExample
 
 @Composable
@@ -23,6 +22,7 @@ fun Root(
         ExmapleIndexListItem(title = "chip", onClick = { navController.navigate("chip") }),
         ExmapleIndexListItem(title = "card", onClick = { navController.navigate("card") }),
         ExmapleIndexListItem(title = "picker", onClick = { navController.navigate("picker") }),
+        ExmapleIndexListItem(title = "dialog", onClick = { navController.navigate("dialog") }),
     ))
     SwipeDismissableNavHost(
         navController = navController,
@@ -45,6 +45,15 @@ fun Root(
         }
         composable("stepper") {
             StepperExample()
+        }
+        composable("dialog") {
+            DialogScreen(onClickAlert = { navController.navigate("alert") }, onClickConfirmation = { navController.navigate("confirmation") })
+        }
+        composable("alert") {
+            AlertExample(onClickPositiveButton = { navController.popBackStack() }, onClickNegativeButton = { navController.popBackStack() })
+        }
+        composable("confirmation") {
+            ConfirmationExample(onTimeout = { navController.popBackStack() })
         }
     }
 }

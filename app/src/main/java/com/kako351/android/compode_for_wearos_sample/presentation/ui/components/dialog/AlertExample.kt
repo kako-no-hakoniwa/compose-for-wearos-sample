@@ -19,7 +19,10 @@ import androidx.wear.compose.material.Text
 import androidx.wear.compose.material.dialog.Alert
 
 @Composable
-fun AlertExample() {
+fun AlertExample(
+    onClickPositiveButton: () -> Unit,
+    onClickNegativeButton: () -> Unit
+) {
     Alert(
         icon = {
             Icon(
@@ -34,13 +37,13 @@ fun AlertExample() {
         negativeButton = {
             Button(
                 colors = ButtonDefaults.secondaryButtonColors(),
-                onClick = {}
+                onClick = onClickNegativeButton
             ) {
                 Text("No")
             }
         },
         positiveButton = {
-            Button(onClick = {}) {
+            Button(onClick = onClickPositiveButton) {
                 Text("Yes")
             }
         }
@@ -55,5 +58,5 @@ fun AlertExample() {
 @Preview
 @Composable
 fun PreviewAlertExample() {
-    AlertExample()
+    AlertExample(onClickPositiveButton = {}, onClickNegativeButton = {})
 }

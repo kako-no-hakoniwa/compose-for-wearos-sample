@@ -25,12 +25,15 @@ import com.kako351.android.compode_for_wearos_sample.R
 import com.kako351.android.compode_for_wearos_sample.presentation.theme.wearColorPalette
 
 @Composable
-fun ConfirmationExample() {
+fun ConfirmationExample(
+    onTimeout: () -> Unit
+) {
     var show by remember { mutableStateOf(true) }
     if(show){
         Confirmation(
             onTimeout = {
                 show = false
+                onTimeout()
             },
             icon = {
                 Image(
@@ -53,5 +56,5 @@ fun ConfirmationExample() {
 @Preview
 @Composable
 fun PreviewConfirmationExample() {
-    ConfirmationExample()
+    ConfirmationExample(onTimeout = {})
 }
