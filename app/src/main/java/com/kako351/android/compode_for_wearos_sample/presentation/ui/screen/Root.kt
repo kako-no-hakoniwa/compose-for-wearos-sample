@@ -9,6 +9,7 @@ import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItems
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ButtonScreen
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.ChipScreen
 
 @Composable
 fun Root(
@@ -29,6 +30,9 @@ fun Root(
         }
         composable("button") {
             ButtonScreen()
+        }
+        composable("chip") {
+            ChipScreen()
         }
     }
 }

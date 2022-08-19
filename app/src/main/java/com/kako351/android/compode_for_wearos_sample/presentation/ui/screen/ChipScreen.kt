@@ -12,9 +12,13 @@ import com.kako351.android.compode_for_wearos_sample.presentation.theme.Compodef
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.ButtonExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.CompactButtonExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.ToggleButtonExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.AvatarChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ImageChipExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.chip.ToggleChipExample
 
 @Composable
-fun ButtonScreen(
+fun ChipScreen(
     modifier: Modifier = Modifier.fillMaxSize(),
     listState: ScalingLazyListState = rememberScalingLazyListState()
 ) {
@@ -33,18 +37,23 @@ fun ButtonScreen(
             state = listState
         ) {
             item {
-                ScreenListItem(title = "Button") {
-                    ButtonExample()
+                ScreenListItem(title = "Chip") {
+                    ChipExample()
                 }
             }
             item {
-                ScreenListItem(title = "Compact Button") {
-                    CompactButtonExample()
+                ScreenListItem(title = "Avatar Chip") {
+                    AvatarChipExample()
                 }
             }
             item {
-                ScreenListItem(title = "Toggle Button") {
-                    ToggleButtonExample()
+                ScreenListItem(title = "Image Chip") {
+                    ImageChipExample()
+                }
+            }
+            item {
+                ScreenListItem(title = "Toggle Chip") {
+                    ToggleChipExample()
                 }
             }
         }
@@ -53,8 +62,8 @@ fun ButtonScreen(
 
 @Preview
 @Composable
-fun PreviewButtonScreen() {
+fun PreviewChipScreen() {
     CompodeforwearossampleTheme {
-        ButtonScreen()
+        ChipScreen()
     }
 }
