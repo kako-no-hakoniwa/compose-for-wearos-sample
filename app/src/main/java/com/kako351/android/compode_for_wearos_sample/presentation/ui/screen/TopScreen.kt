@@ -38,7 +38,7 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.InlineSliderExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.PickerExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.StepperExample
-import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.scaffold.ScaffoldExample
+
 
 @OptIn(ExperimentalWearMaterialApi::class)
 @Composable

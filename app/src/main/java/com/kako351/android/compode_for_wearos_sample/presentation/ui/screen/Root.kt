@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
 import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItems
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.*
@@ -15,7 +16,9 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.SegmentedProgressIndicatorExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.horologist.TimePickerExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.picker.StepperExample
+import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.scaffold.PageIndicatorExample
 
+@OptIn(ExperimentalPagerApi::class)
 @Composable
 fun Root(
     navController: NavHostController = rememberSwipeDismissableNavController()
@@ -27,6 +30,7 @@ fun Root(
         ExmapleIndexListItem(title = "picker", onClick = { navController.navigate("picker") }),
         ExmapleIndexListItem(title = "dialog", onClick = { navController.navigate("dialog") }),
         ExmapleIndexListItem(title = "horologist", onClick = { navController.navigate("horologist") }),
+        ExmapleIndexListItem(title = "page indicator", onClick = { navController.navigate("pageIndicator") }),
     ))
     SwipeDismissableNavHost(
         navController = navController,
@@ -78,6 +82,9 @@ fun Root(
         }
         composable("segmentedProgressIndicator") {
             SegmentedProgressIndicatorExample()
+        }
+        composable("pageIndicator") {
+            PageIndicatorExample()
         }
     }
 }
