@@ -7,8 +7,6 @@ import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import com.google.accompanist.pager.ExperimentalPagerApi
-import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItem
-import com.kako351.android.compode_for_wearos_sample.presentation.data.ExmapleIndexListItems
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.button.*
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.AlertExample
 import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.dialog.ConfirmationExample
@@ -23,21 +21,12 @@ import com.kako351.android.compode_for_wearos_sample.presentation.ui.components.
 fun Root(
     navController: NavHostController = rememberSwipeDismissableNavController()
 ) {
-    val items = ExmapleIndexListItems(items = listOf(
-        ExmapleIndexListItem(title = "button", onClick = { navController.navigate("button") }),
-        ExmapleIndexListItem(title = "chip", onClick = { navController.navigate("chip") }),
-        ExmapleIndexListItem(title = "card", onClick = { navController.navigate("card") }),
-        ExmapleIndexListItem(title = "picker", onClick = { navController.navigate("picker") }),
-        ExmapleIndexListItem(title = "dialog", onClick = { navController.navigate("dialog") }),
-        ExmapleIndexListItem(title = "horologist", onClick = { navController.navigate("horologist") }),
-        ExmapleIndexListItem(title = "page indicator", onClick = { navController.navigate("pageIndicator") }),
-    ))
     SwipeDismissableNavHost(
         navController = navController,
         startDestination = "root"
     ) {
         composable("root") {
-            TopScreen(items = items)
+            TopScreen(rootNavController = navController)
         }
         composable("button") {
             ButtonScreen()
@@ -83,7 +72,7 @@ fun Root(
         composable("segmentedProgressIndicator") {
             SegmentedProgressIndicatorExample()
         }
-        composable("pageIndicator") {
+        composable("pager") {
             PageIndicatorExample()
         }
     }
